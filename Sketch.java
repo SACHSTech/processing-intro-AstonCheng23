@@ -28,7 +28,11 @@ public class Sketch extends PApplet {
   public void draw() {
 	  
 	// sample code, delete this stuff
-    stroke(0);
+    noStroke();
+    fill(0, 176, 67);
+    ellipse(200, 325, 400, 60);
+    
+    noStroke();
     fill(0, 176, 67);
     rect(0, 325, 400, 325);
 
