@@ -37,6 +37,10 @@ public class Sketch extends PApplet {
     rect(0, 325, 400, 325);
 
     stroke(0);
+    fill(250, 255, 67);
+    ellipse(400, 0, 60, 60);
+
+    stroke(0);
     noFill();
     bezier(200, 250, 180, 335, 220, 295, 200, 365);
 
@@ -63,7 +67,8 @@ public class Sketch extends PApplet {
       stroke(0);
       fill(200, 0, 10);
       ellipse(0, 40, 25, 80);
-      
+
+
       rotationT += 1; 
       
       rotateVar += 45; 
