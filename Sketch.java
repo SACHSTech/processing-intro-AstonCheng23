@@ -53,15 +53,14 @@ public class Sketch extends PApplet {
     ellipse(200, 175, 25, 30);
 
     translate(200, 175);
-    pushMatrix();
+    //pushMatrix();
 
-    while (rotationT < -9);{
+    while (rotationT < 9){
       //for some reason, setting rotationT to < 9 doesn't work.
       stroke(0);
       fill(200, 0, 10);
       ellipse(0, 40, 25, 80);
 
-      pushMatrix();
       rotate(radians(rotateVar + 45));
 
       stroke(0);
