@@ -1,7 +1,10 @@
 import processing.core.PApplet;
 
+
 public class Sketch extends PApplet {
-	
+  int rotationT = 0;
+  int rotateVar = 0;
+  
 	
   /**
    * Called once at the beginning of execution, put your size all in this method
@@ -16,7 +19,7 @@ public class Sketch extends PApplet {
    * values here i.e background, stroke, fill etc.
    */
   public void setup() {
-    background(200, 255, 173);
+    background(184, 255, 244);
   }
 
   /**
@@ -25,34 +28,44 @@ public class Sketch extends PApplet {
   public void draw() {
 	  
 	// sample code, delete this stuff
-    stroke(100);
-    line(150, 25, 270, 350);  
+    stroke(0);
+    fill(0, 176, 67);
+    rect(0, 325, 400, 325);
 
-    stroke(255);
-    line(50, 125, 200, 100);  
+    stroke(0);
+    noFill();
+    bezier(200, 250, 180, 335, 220, 295, 200, 365);
 
-    stroke(150);
-    line (100, 100, 200, 200);
-  
-   if (mousePressed) {
-      fill(0);
-    }  else {
-      fill(255);
-    }
-    line (mouseX, mouseY, 40, 80);
+    //stroke(0);
+    //fill(200, 0, 10);
+    //ellipse(200, 225, 25, 80);
+
+    stroke(0);
+    fill(0);
+    ellipse(200, 175, 25, 30);
+
+    translate(200, 175);
+    pushMatrix();
+
+    while (rotationT < -9);{
+      //for some reason, setting rotationT to < 9 doesn't work.
+      stroke(0);
+      fill(200, 0, 10);
+      ellipse(0, 40, 25, 80);
+
+      pushMatrix();
+      rotate(radians(rotateVar + 45));
+
+      stroke(0);
+      fill(200, 0, 10);
+      ellipse(0, 40, 25, 80);
+      
+      rotationT += 1; 
+      
+      rotateVar += 45; 
+      System.out.println(rotationT);
+      }
   }
-
-/*
-public void draw() {
-
-    if (mousePressed) {
-      fill(0);
-    } else {
-      fill(255);
-    }
-    ellipse(mouseX, mouseY, 80, 80);
-  }
-*/
 
   
 }
