@@ -1,10 +1,15 @@
-import processing.core.PApplet;
+/*
+Name: Aston
+Date: 2/23/2022
+Project: Processing Task
+*/
 
+
+import processing.core.PApplet;
 
 public class Sketch extends PApplet {
   int rotationT = 0;
   int rotateVar = 0;
-  
 	
   /**
    * Called once at the beginning of execution, put your size all in this method
@@ -44,10 +49,6 @@ public class Sketch extends PApplet {
     noFill();
     bezier(200, 250, 180, 335, 220, 295, 200, 365);
 
-    //stroke(0);
-    //fill(200, 0, 10);
-    //ellipse(200, 225, 25, 80);
-
     stroke(0);
     fill(0);
     ellipse(200, 175, 25, 30);
@@ -56,7 +57,6 @@ public class Sketch extends PApplet {
     //pushMatrix();
 
     while (rotationT < 9){
-      //for some reason, setting rotationT to < 9 doesn't work.
       stroke(0);
       fill(200, 0, 10);
       ellipse(0, 40, 25, 80);
